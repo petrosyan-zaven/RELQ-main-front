@@ -1,0 +1,134 @@
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .3s linear;
+    color: #fff;
+}
+
+$bgColor : rgba(0, 0, 0, 0.9);
+$lettercolor: green;
+$efectColor: red;
+$textSize: 16px;
+
+.App {
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    background-color: $bgColor;
+    display: flex;
+    flex-wrap: wrap;
+     .Header {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 40px;
+        color: $lettercolor;
+        position: sticky;
+        top: -10px;
+        z-index: 10;
+        display: flex;
+        background-color: black;
+        justify-content: space-between;
+        box-shadow: -5px 5px 5px rgba(3, 128, 3, 0.499) ;
+
+
+        .box {
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .btn {
+                color: black;
+                width: 60px;
+                height: 25px;
+                border-radius: 5px;
+            }
+            .NavBar {
+                a {
+                    color: $lettercolor;
+                    font-size: 20px;
+                    padding: 5px 15px;
+                }
+                a:hover, a.active {
+                    color: $efectColor
+                }
+            }
+        }
+     }
+     .Asaid {
+        width: 20%;
+        background: $bgColor;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        .box {
+            position: relative;
+            left: 20%;
+            width: 79%;
+        }
+     }
+     .Content {
+        position: relative; 
+        width: 100%;
+        .Home {
+            display: flex;
+            flex-wrap: wrap;
+           justify-content: center;
+           gap: 20px;
+            .cart {
+                width: 20%;
+                height: 300px;
+                border: 1px solid;
+            }
+        }
+        width: 75%;
+        a {
+            font-size: 20px;
+        }
+
+     }
+     .login {
+        max-width: 400px;
+        height: 400px;
+        margin: 0 auto;
+        border: 1px solid;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        color: $lettercolor;
+        input {
+            color: black;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px;
+        }
+        .log {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .btn-login {
+                padding: 5px 13px;
+                border-radius: 7px;
+                background: rgb(65, 65, 232);
+                align-items: center;
+            }
+        }
+     }
+
+     .Footer {
+        width: 100%;
+        text-align: center;
+     }
+}
+
+

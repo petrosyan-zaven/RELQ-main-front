@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import  { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import  Header  from './components/header'
+import Home from './pages/home'
+import Asaid from './components/asaid'
+import Footer from './components/footer'
+import SingleProduct from "./pages/singleProduct";
+import CategoryPage from "./pages/categoryPage/CategoryPage";
+import LoginForm from "./pages/login";
+import About from "./pages/about/About";
+import Register from "./pages/register";
+
+import AdminMainPage from "./admin/admin_main_page/AdminMainPage";
+import AddCat from "./admin/addCat/AddCat";
+import AddProduct from "./admin/AddProduct/AddProduct";
+
 
 function App() {
+
+  const [ active, setActive ] = useState(false)
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header active={active} setActive={setActive}/>
+        <Asaid active={active} setActive={setActive}/>
+        <div className="Content" >
+          <Routes>
+            <Route path="/" element = {<Home />} />
+            <Route path="/prod/:id" element = {<SingleProduct />} />
+            <Route path="/cat/:categoryName" element = {<CategoryPage />} />
+            <Route path="/login" element = {<LoginForm />} />
+            <Route path="/about" element = {<About />} />
+            <Route path="/register" element = {<Register />} />
+
+            <Route path="/admin" element = {<AdminMainPage />} />
+            <Route path="/add-cat" element = {<AddCat /> } />
+            <Route path="/add-prod" element = {<AddProduct /> } />
+
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
     </div>
   );
 }
