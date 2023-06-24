@@ -11,8 +11,22 @@ $lettercolor: green;
 $efectColor: red;
 $textSize: 16px;
 
-.App {
+html::-webkit-scrollbar {
+    width: 10px;
+}
 
+html::-webkit-scrollbar-track {
+    background: $bgColor;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: darkgreen;
+    border-radius: 8px;
+}
+
+
+.App {
+    min-height: 100vh;
     .hide {
         display: none;
     }
@@ -23,6 +37,7 @@ $textSize: 16px;
 
     background-color: $bgColor;
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
      .Header {
         width: 100%;
@@ -36,12 +51,32 @@ $textSize: 16px;
         background-color: black;
         justify-content: space-between;
         box-shadow: -5px 5px 5px rgba(3, 128, 3, 0.499) ;
+        .fa-solid {
+            font-size: 25px;
+            color: $lettercolor;
+        }
 
+        .box2 {
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 20px;
+            .btn {
+                color: black;
+                width: 60px;
+                height: 25px;
+                border-radius: 5px;
+            }
+            .fa-solid {
+                margin-right:15px ;
+            }
+        }
 
         .box {
-            width: 30%;
+            width: 50%;
             display: flex;
-            justify-content: space-around;
+            justify-content: start;
             align-items: center;
             .btn {
                 color: black;
@@ -49,11 +84,16 @@ $textSize: 16px;
                 height: 25px;
                 border-radius: 5px;
             }
+             .logo {
+                padding: 10px;
+             }
+            
+            
             .NavBar {
                 a {
                     color: $lettercolor;
                     font-size: 20px;
-                    padding: 5px 15px;
+                    padding: 10px 15px;
                 }
                 a:hover, a.active {
                     color: $efectColor
@@ -61,24 +101,13 @@ $textSize: 16px;
             }
         }
      }
-     .Asaid {
-        width: 20%;
-        background: $bgColor;
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        .box {
-            position: relative;
-            left: 20%;
-            width: 79%;
-        }
-     }
+
      .Content {
-        position: relative; 
-        width: 100%;
+        width: 84%;
+
         .Home {
-            display: flex;
-            flex-wrap: wrap;
+           display: flex;
+           flex-wrap: wrap;
            justify-content: center;
            gap: 20px;
             .cart {

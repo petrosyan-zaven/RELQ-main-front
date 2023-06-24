@@ -4,6 +4,7 @@ import './AddProduct.scss'
 
 function AddProduct() {
   const api = "http://localhost:5000/addproduct";
+  const token = localStorage.getItem('token') || sessionStorage.getItem('token');
 
   const [products, setProduct] = useState({
     productName: "",
@@ -13,8 +14,8 @@ function AddProduct() {
     image: null,
   });
 
-  const categories = useCategories();
-  console.log(categories);
+  const [ data ] = useCategories();
+  console.log(data[0].categoryName);
 
   const onInputChange = (e) => {
     setProduct({ ...products, [e.target.name]: e.target.value });
@@ -36,6 +37,11 @@ function AddProduct() {
 
     fetch(api, {
       method: "POST",
+      headers: {
+        
+        'Authorization': `Bearer ${token}`,
+      },
+
       body: formData,
     })
       .then((response) => {
@@ -46,7 +52,7 @@ function AddProduct() {
       })
       .then((data) => {
         console.log("Product added successfully:", data);
-        // Reset the form after successful submission
+    
         setProduct({
           productName: "",
           categoryId: "",
@@ -81,16 +87,16 @@ function AddProduct() {
             onChange={onInputChange}
           >
             <option value="">Select Category</option>
-            {categories?.map((category) => (
-              <option key={category.id} value={category.id}>
-                {category.name}
+            {data?.map((category, i) => (
+              <option key={i} value={category.id}>
+                {category.categoryName}
               </option>
             ))}
           </select>
         </div>
 
         <div className="inp">
-          <input
+          <textarea
             type="text"
             placeholder="Description"
             value={products.description}

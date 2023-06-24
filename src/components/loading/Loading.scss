@@ -1,0 +1,29 @@
+.loading {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, .8);
+    z-index: -1;
+    .spin {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border-top: 5px solid rgba(255, 255, 255, .6);
+        border-bottom: 5px solid rgba(255, 255, 255, .6);
+        border-right: 5px solid rgba(255, 255, 255, .6);
+        border-left: 5px solid green;
+        animation: spin .8s linear infinite;
+        z-index: -1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

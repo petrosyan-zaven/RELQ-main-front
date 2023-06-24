@@ -9,7 +9,6 @@ const apiUrl = "http://localhost:5000/product/";
 function useProducts() {
 
   const { id } = useParams() ;
-  console.log(id);
   const [data, setData] = useState();
 
   useEffect(() => {
@@ -22,7 +21,7 @@ function useProducts() {
   }, [id]);
 
 
-  return data;
+  return [data, setData];
 }
 
 export default useProducts;

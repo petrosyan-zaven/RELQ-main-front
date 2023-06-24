@@ -1,0 +1,48 @@
+.footer {
+    position: sticky;
+    bottom: -100%;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+
+    h3 {
+        text-align: center;
+        color: rgba(255, 0, 0, 0.822);
+    }
+
+    .contact-box {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+       
+
+        a {
+            width: 40px;
+            height: 40px;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 50px;
+            font-size: 20px;
+            color: rgb(2, 49, 2);
+        }
+
+        a:hover {
+            border: 1px solid red;
+            width: 45px;
+            height: 45px;
+            z-index: 3;
+        }
+
+        a:hover i {
+            transform: rotateX(360deg) scale(1.5);
+            color: red;
+            transition: .5s linear;
+            z-index: 3;
+        }
+        
+    }
+
+}

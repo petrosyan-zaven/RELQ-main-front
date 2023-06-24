@@ -35,11 +35,10 @@ function Login() {
       console.log(data.role);
       const token = data.jwt;
       const role = data.role;
-      console.log(token)
+      const id = data.userid;
+      console.log(data)
 
-      if( role === 1 ) {
-        navigate('/admin')
-      } else if (data.role === 0 ) {
+      if( role === 1  || role === 0) {
         navigate('/')
       } else {
         console.log('err');
@@ -49,9 +48,12 @@ function Login() {
       if( remember ) {
         localStorage.setItem('token', token);
         localStorage.setItem('role', role);
+        localStorage.setItem('id', id);
       } else {
         sessionStorage.setItem('token', token);
         sessionStorage.setItem('role', role);
+        localStorage.setItem('id', id);
+
       }
       
       if("error" in data) { alert(data.error)}

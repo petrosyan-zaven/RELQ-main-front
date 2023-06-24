@@ -19,7 +19,7 @@ import ProductControll from "./admin/productControll/ProductControll";
 function App() {
 
   const [ active, setActive ] = useState(false)
-  // const [ admin, setAdmin ] = useState(false); 
+  
   return (
     <div className="App">
       <Router>

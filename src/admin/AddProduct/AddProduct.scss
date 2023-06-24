@@ -1,9 +1,27 @@
 .AddProduct {
-    form{
+    form {
+        select option {
+            color: #000
+        }
         .inp {
-            input, select, select option {
-                color: black;
+            width: 300px;
+            margin: 7px 0;
+            input, textarea, select {
+                width: 100%;
+                background: none;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid green
             }
+        }
+        button {
+            background: green;
+            padding: 5px 10px;
+            border-radius: 7px;
+        }
+        button:hover {
+            cursor: pointer;
+            opacity: .7;
         }
     }
 }

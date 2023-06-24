@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# E-commerce Project Front-end 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the README documentation for the E-commerce front-end project, which is built using ReactJS, AntD, and SCSS.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The E-commerce front-end project is a user interface for the E-commerce platform. It provides a responsive and interactive interface for users to browse products, add items to the cart, manage orders, and perform various other e-commerce functionalities.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before running the E-commerce front-end project, ensure you have the following prerequisites installed on your machine:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js (v12 or above)
+- Package manager (npm or yarn)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the E-commerce front-end project, follow these steps:
 
-### `npm run build`
+1. Clone the repository:
+git clone https://github.com/petrosyan-zaven/RELQ-main-front
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+cd e-commerce-front
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+3. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This will start the development server and make the application available at `http://localhost:3005`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+The project structure follows a component-based architecture, with reusable components organized in a hierarchical structure:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **src:** Contains the main source code of the project.
+- **components:** Contains reusable components used throughout the application.
+- **pages:** Contains individual pages or views of the application.
+- **styles:** Contains SCSS files for custom styling.
+- **utils:** Contains utility functions and helper modules.
+- **App.js:** The main entry point of the application.
+- **index.js:** The root file that renders the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Customization and Theming
 
-### Code Splitting
+The E-commerce front-end project is built on top of AntD, which provides a powerful theming mechanism. You can easily customize the design and theme of the application by modifying the AntD theme variables or creating your own SCSS styles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To customize the AntD theme, refer to the [AntD Customization](https://ant.design/docs/react/customize-theme) documentation.
 
-### Analyzing the Bundle Size
+To modify the SCSS styles, navigate to the `src/styles` directory and update the SCSS files according to your needs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+To deploy the E-commerce front-end project for production, you need to build the optimized bundle. Follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Run the build command:
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. The optimized and minified files will be generated in the `build` directory.
+3. Deploy the contents of the `build` directory to your preferred hosting platform.
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you would like to contribute to the project, please follow these guidelines:
 
-### `npm run build` fails to minify
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch to your fork.
+4. Submit a pull request, explaining the changes you have made.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+The E-commerce front-end project is open-source and released under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute the codebase as per the terms of the license.
+
+## Acknowledgments
+
+- [ReactJS](https://reactjs.org/)
+- [AntD](https://ant.design/)
+- SCSS
+
+## Contact
+
+If you have any questions, suggestions, or issues, please feel free to contact the project maintainers at [petrosyanzaven310@gmail.com].

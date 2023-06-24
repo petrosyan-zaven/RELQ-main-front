@@ -1,43 +1,44 @@
 import useCategories from '../../hook/useCategorye';
 import { Link } from 'react-router-dom';
 import './asaid.scss'
-import { useState, useEffect } from 'react';
+import { useEffect, useState} from 'react';
 // import { Button } from 'antd';
 
 
-function Asaid({active}) {
+function Asaid({active, setActive}) {
 
   const role = localStorage.getItem('role') || sessionStorage.getItem('role')
   console.log(active, "active");
-  const categories = useCategories();
-  const [ admin, setAdmin] = useState(false);
+  const  [admin, setAdmin ] = useState(false)
+  const [ data ] = useCategories();
+ 
 
-  useEffect (()=>{
-    if(role === "1") {
-      setAdmin(!admin)
+
+  useEffect (()=> {
+    if(role === '1') {
+      setAdmin(!admin);
     } else {
-      setAdmin(admin)
-    }
-  }, [role, active ])
+      setAdmin(false);
+    } 
+  }, [role])
+  
+
 
   return (
-    <div className='Asaid'>
+    <nav className='Asaid'>
     {
-      categories?.map((cat, index) => {
+      data?.map((cat, index) => {
         return (
-          <div className='box' key={index}>
-          <Link to = {'/cat/' + cat.categoryName} >{cat.categoryName}</Link>
+       
+          <Link key={index} to = {'/cat/' + cat.id} >{cat.categoryName}</Link>
 
-          </div>
         )
       })
     }
-    <div className='box'>
-      <Link className={active ?  "show": "hide"} to={'/add-cat'}>add category</Link>
 
-    </div>
+      <Link className={admin ?  "show": "hide"} to={'/add-cat'}>option <i className="fa-sharp fa-regular fa-pen-to-square"></i></Link>
 
-    </div>
+    </nav>
   )
 }
 
