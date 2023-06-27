@@ -14,7 +14,7 @@ import AdminMainPage from "./admin/admin_main_page/AdminMainPage";
 import AddCat from "./admin/addCat/AddCat";
 import AddProduct from "./admin/AddProduct/AddProduct";
 import ProductControll from "./admin/productControll/ProductControll";
-
+import './App.scss'
 
 function App() {
 

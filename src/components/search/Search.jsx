@@ -39,7 +39,7 @@ function Search({isSearchVisible, setSearchVisible}) {
 
   return (
     <div className="search" onClick={showSearch}>
-      <i class="fa-solid fa-magnifying-glass"></i>
+      <i className="fa-solid fa-magnifying-glass"></i>
       {isSearchVisible && <SearchItem isSearchVisible = {isSearchVisible} setSearchVisible = {setSearchVisible}/>}
     </div>
   );

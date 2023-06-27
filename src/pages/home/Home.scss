@@ -29,7 +29,7 @@
             overflow: hidden;
             .gameImg {
                 width: 100%;
-                height: auto;   
+                height: 100%;   
             }
 
         }
@@ -83,3 +83,26 @@
     }
 }
 
+@media screen and (max-width: 1110px) {
+    .Home {
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+   .Home .card {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Home .card {
+         width: 40%;
+     }
+ }
+
+ @media screen and (max-width: 760px) {
+    .Home .card {
+         width: 75%;
+     }
+ }

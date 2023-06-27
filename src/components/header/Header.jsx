@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Search from '../search'
 import NavBar from '../navBar/NavBar'
 import { useNavigate, Link } from 'react-router-dom'
+import './Header.scss'
 
 
 function Header({active, setActive}) {
@@ -33,7 +34,8 @@ console.log(login, "log");
   return (
     <div className='Header'>
       <div className='box'>
-        <h1 className='logo'>Logo </h1>
+        <Link to={'/'} className='logo'></Link>
+
         <NavBar active={active} setActive = {setActive}/>
       </div>
       <div className='box2'>

@@ -1,0 +1,114 @@
+
+.Header {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 40px;
+  color: green;
+  position: sticky;
+  top: -10px;
+  z-index: 10;
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  box-shadow: -5px 5px 5px rgba(3, 128, 3, 0.499);
+
+  .fa-solid {
+    font-size: 25px;
+    color: green;
+  }
+
+  .box2 {
+    // width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    .btn {
+      color: black;
+      width: 60px;
+      height: 25px;
+      border-radius: 5px;
+    }
+
+    .fa-solid {
+      margin-right: 15px;
+    }
+  }
+
+  .box {
+    // width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .btn {
+      color: black;
+      width: 60px;
+      height: 25px;
+      border-radius: 5px;
+    }
+
+    .logo {
+      padding: 10px;
+      background: url(../../../public/logo.jpg);
+      width: 60px;
+      height: 50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 5;
+    }
+
+    .NavBar {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: green;
+        font-size: 20px;
+        padding: 10px 15px;
+      }
+
+      a:hover,
+      a.active {
+        color: red;
+      }
+    }
+  }
+  .burger {
+    i {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .Header .burger {
+    i {
+      display: block;
+    }
+
+    .burger-nav {
+      width: 100%;
+      height: 0;
+      visibility: hidden;
+      background: rgba($color: #000000, $alpha: 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      transition: all 0.2s ease;
+      z-index: 1000;
+    }
+
+    &.open {
+      
+      .burger-nav {
+        visibility: visible;
+        height: 80vh;
+      }
+    }
+  }
+}

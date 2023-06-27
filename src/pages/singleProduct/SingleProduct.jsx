@@ -13,7 +13,6 @@ function SingleProduct() {
 
   const [data, setData] = useState({});
   const [downloaded, setDownloaded] = useState(0);
-  console.log(data);
 
   useEffect(() => {
     fetch(`http://localhost:5000/product/${id}`)

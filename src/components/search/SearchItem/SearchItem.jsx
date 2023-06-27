@@ -1,6 +1,8 @@
 import React from 'react'
 
+
 function SearchItem({isSearchVisible, setSearchVisible}) {
+
 
   function hideSearch() {
     setSearchVisible(!isSearchVisible);
